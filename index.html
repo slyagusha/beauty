@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Студия красоты</title>
+	<link href="css/studio.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+  <link rel="shortcut icon" href="img/icon.png">
+</head>
+
+<body>
+    <div class="main">
+        <h1> <img src="img/name.png"></h1>
+        <ul class="menu">
+            <li><a href="studia.html">Главная</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Акции</a></li>
+            <li><a href="#">Галерея</a></li>
+            <li><a href="contakt.html">Контакты</a></li>
+        </ul>
+        <div class="karusel">
+            <ul id="slides">
+                <!--  карусель   -->
+                <li class="slide showing"><img src="img/1.jpg" alt=""></li>
+                <li class="slide"><img src="img/2.jpg" alt=""></li>
+                <li class="slide"><img src="img/3.jpg" alt=""></li>
+                <li class="slide"><img src="img/4.jpg" alt=""></li>
+                <li class="slide"><img src="img/5.jpg" alt=""></li>
+            </ul>
+           
+        </div>
+        
+        <div class="imgmain">
+            <figure>
+                <img src="img/1.jpg">
+                <figcaption>Рисунок 1</figcaption>
+            </figure>
+            <figure>
+                <img src="img/2.jpg">
+                <figcaption>Рисунок 2</figcaption>
+            </figure>
+            <figure>
+                <img src="img/3.jpg">
+                <figcaption>Рисунок 3</figcaption>
+            </figure>
+            <figure>
+                <img src="img/4.jpg">
+                <figcaption>Рисунок 4</figcaption>
+            </figure>
+            <figure>
+                <img src="img/5.jpg">
+                <figcaption>Рисунок 5</figcaption>
+            </figure>
+            <figure>
+                <img src="img/6.jpg">
+                <figcaption>Рисунок 6</figcaption>
+            </figure>
+        </div>
+    </div>
+    <script type="text/javascript" src="bootstrap-4.3.1-dist/js/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="bootstrap-4.3.1-dist/js/popper.min.js"></script>
+    <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+     <script>
+            var slides = document.querySelectorAll('#slides .slide');
+            var currentSlide = 0;
+            var slideInterval = setInterval(nextSlide, 2000);
+
+            function nextSlide() {
+                slides[currentSlide].className = 'slide';
+                currentSlide = (currentSlide + 1)%slides.length;
+                slides[currentSlide].className = 'slide showing';
+            }
+            </script>
+</body>
+</html>

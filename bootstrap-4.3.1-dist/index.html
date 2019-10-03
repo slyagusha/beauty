@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<style type="text/css">
+		header, footer, main, article, aside {
+			box-sizing: border-box;
+		}
+	    header, footer {
+	     	background-color: red;
+	     	min-height: 50px;
+	    }
+        main {
+        	background-color: yellow;
+        }
+        article, aside {
+        	border: 2px dotted red;
+        	min-height: 150px;
+        	/*text-align: center;*/
+        }
+        kbd {
+        	background: grey;
+        	color: red;
+        	box-shadow: 10px 10px 5px black;
+        }
+	</style>
+</head>
+<body>
+<header class="container-fluid">header</header>
+<main class="container py-lg-5">
+	<div class="row justify-content-lg-between">
+	    <article class="col-12 col-sm-8 col-lg-5 ">article
+
+        <dl>
+        	<dt>tag</dt>
+        	<dd>Lorem <kbd>ipsum</kbd> dolor sit amet, consectetur adipisicing elit. Accusamus animi aperiam quibusdam necessitatibus, eum saepe tempora nostrum eligendi! Saepe velit, nostrum mollitia itaque non tempora impedit temporibus magni architecto a!</dd>
+        </dl>
+
+	    </article>
+	    <aside class="col-12 col-sm-4 col-lg-3 order-lg-first bg-danger">sidebar1</aside>
+        <aside class="col-12 col-lg-3 bg-primary">sidebar2</aside>	
+    </div>
+</main>
+<footer class="container-fluid">footer</footer>
+
+
+
+
+<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>
