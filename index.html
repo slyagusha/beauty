@@ -6,11 +6,12 @@
 	<link href="css/studio.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.css">
   <link rel="shortcut icon" href="img/icon.png">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
 </head>
 
 <body>
     <div class="main">
-        <h1> <img src="img/name.png"></h1>
+        <h1> <img src="img/name.png" class="animated heartBeat"></h1>
         <ul class="menu">
             <li><a href="index.html">Главная</a></li>
             <li><a href="#">Новости</a></li>
@@ -19,14 +20,17 @@
             <li><a href="#">Галерея</a></li>
             <li><a href="contakt.html">Контакты</a></li>
         </ul>
+        <div class="photo">
+            <h2> <img src="img/500.jpg" alt=""></h2>
+        </div>
         <div class="karusel">
             <ul id="slides">
                 <!--  карусель   -->
-                <li class="slide showing"><img src="img/1.jpg" alt=""></li>
-                <li class="slide"><img src="img/2.jpg" alt=""></li>
-                <li class="slide"><img src="img/3.jpg" alt=""></li>
-                <li class="slide"><img src="img/4.jpg" alt=""></li>
-                <li class="slide"><img src="img/5.jpg" alt=""></li>
+                <li class="slide showing"><img src="img/slide1.jpg" alt=""></li>
+                <li class="slide"><img src="img/slide2.jpg" alt=""></li>
+                <li class="slide"><img src="img/slide3.jpg" alt=""></li>
+                <li class="slide"><img src="img/slide4.jpg" alt=""></li>
+                <li class="slide"><img src="img/slide5.jpg" alt=""></li>
             </ul>
            
         </div>
@@ -61,16 +65,7 @@
     <script type="text/javascript" src="bootstrap-4.3.1-dist/js/jquery-3.4.1.js"></script>
     <script type="text/javascript" src="bootstrap-4.3.1-dist/js/popper.min.js"></script>
     <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
-     <script>
-            var slides = document.querySelectorAll('#slides .slide');
-            var currentSlide = 0;
-            var slideInterval = setInterval(nextSlide, 2000);
-
-            function nextSlide() {
-                slides[currentSlide].className = 'slide';
-                currentSlide = (currentSlide + 1)%slides.length;
-                slides[currentSlide].className = 'slide showing';
-            }
-            </script>
+    <script src="scripts/slide.js"></script>
+     
 </body>
 </html>
